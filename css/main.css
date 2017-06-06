@@ -1,4 +1,4 @@
-html, body, div, ul, li, button, h1,h2,h3,h4,h5 p
+html, body, div, ul, ol, li, button, h1,h2,h3,h4,h5 p
 {
     margin: 0px;
     padding: 0px;
@@ -37,6 +37,8 @@ a:hover{
     margin: 0px auto;
 }
 
+
+
 /*.rainbowize {
   background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
@@ -47,7 +49,43 @@ a:hover{
 
 #content{
     margin-top:40px;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
+}
+
+#sidebar
+{
+    position: absolute;
+    top:0px;
+    left: 8%;
+    padding: 30px;
+    padding-right: 60px;
+    width: 220px;
+    z-index: 2;
+    float:left;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: #4c4c4c;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#sidebar ul
+{
+    list-style-type: none;
+}
+#sidebar ol
+{
+    list-style-position: inside;
+}
+
+#sidebar li
+{
+    margin-left: 10px;
+    padding: 0;
+}
+#sidebar h4
+{
+    text-transform: uppercase;    
 }
 
 #sc-widget
