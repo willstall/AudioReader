@@ -1,4 +1,4 @@
-html, body, div, ul, li, button, h1, p
+html, body, div, ul, li, button, h1,h2,h3,h4,h5 p
 {
     margin: 0px;
     padding: 0px;
@@ -8,21 +8,27 @@ body
 {
     overflow: hidden;
     background-color: #3c3c3c;
-    color: #CCCCCC;
+    font-family: 'Open Sans', sans-serif;
+    color: #BBBBBB;
+    line-height: 2em;
+}
+
+h1,h2,h3,h4,h5
+{
+    font-family: 'Cormorant SC', serif;    
+    color: #FFFFFF;
 }
 
 a
 {
     color:#FFFFFF;
     font-weight: bold;
+    text-decoration: none;
+     -webkit-transition: color .7s;
+    transition: color .7s;
 }
 a:hover{
     color:#deffc6;
-}
-
-#content{
-    margin-top:40px;
-    margin-bottom: 40px; 
 }
 
 .min-width
@@ -31,8 +37,22 @@ a:hover{
     margin: 0px auto;
 }
 
+/*.rainbowize {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}*/
+
+#content{
+    margin-top:40px;
+    margin-bottom: 40px; 
+}
+
 #sc-widget
 {
    position: absolute;
    bottom: 0px;
 }
+

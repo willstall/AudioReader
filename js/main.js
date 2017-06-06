@@ -1,3 +1,5 @@
+// AUDIO PLAYER
+
 function AudioPlayer( widget )
 {
 	this.widget = widget;
@@ -13,6 +15,9 @@ AudioPlayer.prototype.play = function( index )
 {
 	this.widget.skip( index );
 }
+
+
+// DOCUMENT SETUP
 
 $( document ).ready(function()
 {
