@@ -6,7 +6,7 @@ html, body, div, ul, ol, li, button, h1,h2,h3,h4,h5 p
 
 body
 {
-    background-color: #3c3c3c;
+    background-color: #3b3b3b;
     font-family: 'Open Sans', sans-serif;
     color: #BBBBBB;
     line-height: 2em;
@@ -35,6 +35,8 @@ a:hover{
 {
     max-width: 1300px;
     margin: 0px auto;
+    margin-left:3%;
+    margin-right:3%;
 }
 
 #content{
