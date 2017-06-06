@@ -1,20 +1,36 @@
-var widgetl
-
-function main()
-{	
-	var iframeElement   = document.querySelector('iframe');
-	var iframeElementID = iframeElement.id;
-	widget         = SC.Widget(iframeElement);
-	var widget2         = SC.Widget(iframeElementID);
-
-	console.log(widget);
-}
-
-function play( index )
+function AudioPlayer( widget )
 {
-
-	widget.skip( index );
-	widget.play();
+	this.widget = widget;
+	this.widget.bind(SC.Widget.Events.FINISH, this.finish.bind(this));
 }
 
-// $('a').click( function(e) {e.preventDefault(); /*your_code_here;*/ return false; } );
+AudioPlayer.prototype.finish = function()
+{
+	this.widget.pause();
+};
+
+AudioPlayer.prototype.play = function( index )
+{
+	this.widget.skip( index );
+}
+
+$( document ).ready(function()
+{
+	var widgetIframe = document.getElementById('sc-widget'),
+        widget       = SC.Widget(widgetIframe);
+
+	var player = new AudioPlayer( widget );
+	// console.log(widget);
+	// console.log(player);
+
+	$('a').click(
+		function(e)
+		{
+			e.preventDefault();
+			var href = $(this).attr('href');
+			player.play( href );
+			// console.log( player );
+			return false;
+		}
+	);
+});
